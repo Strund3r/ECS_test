@@ -1,0 +1,28 @@
+version: '2'
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+  redis:
+    image: redis
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - "6379:6379"
+  web:
+    image: strund3r/ecs
+    command: /bin/sh -c "chmod +x run.sh && ./run.sh"
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+      - mongo
+  worker:
+    image: strund3r/ecs
+    command: bundle exec sidekiq
+    depends_on:
+      - redis
+      - mongo

@@ -1,0 +1,15 @@
+defaults: &defaults
+  adapter: mongo
+  host: localhost
+
+production:
+  <<: *defaults
+  database: ecs_production
+
+development:
+  <<: *defaults
+  database: ecs_development
+
+test:
+  <<: *defaults
+  database: ecs_test
