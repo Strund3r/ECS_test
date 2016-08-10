@@ -9,6 +9,7 @@ if [ -d "~/myapp" ]; then
 else
   cd /home/franzwagner/Documents/ecs_teste
   rm -f ~/Documents/ecs_teste/tmp/pids/server.pid
+  rm -f /myapp/tmp/pids/server.pid
   printf "\n\n"
   cat message/localhost.txt
   printf "\n\n"
