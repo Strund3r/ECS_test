@@ -4,12 +4,14 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+    mem_limit: 260833280    
   redis:
     image: redis
     volumes:
       - ./redis.conf:/usr/local/etc/redis/redis.conf
     ports:
       - "6379:6379"
+    mem_limit: 260833280
   web:
     image: strund3r/ecs
     command: /bin/sh -c "chmod +x run.sh && ./run.sh"
@@ -20,9 +22,11 @@ services:
     depends_on:
       - redis
       - mongo
+    mem_limit: 260833280
   worker:
     image: strund3r/ecs
     command: bundle exec sidekiq
     depends_on:
       - redis
       - mongo
+    mem_limit: 260833280
