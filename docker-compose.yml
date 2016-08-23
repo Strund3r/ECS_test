@@ -4,7 +4,7 @@ services:
     image: mongo
     ports:
       - "27017:27017"
-    mem_limit: 260833280    
+    mem_limit: 260833280
   redis:
     image: redis
     volumes:
@@ -16,7 +16,7 @@ services:
     image: strund3r/ecs
     command: /bin/sh -c "chmod +x run.sh && ./run.sh"
     volumes:
-      - .:/myapp
+      - ./:/myapp
     ports:
       - "3000:3000"
     depends_on:
