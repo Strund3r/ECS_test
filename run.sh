@@ -11,7 +11,7 @@ else
   rm -f ~/Documents/ecs_teste/tmp/pids/server.pid
   rm -f ~/myapp/tmp/pids/server.pid
   printf "\n\n"
-  cat ~/Documents/ecs_teste/message/localhost.txt
+  cat /message/localhost.txt
   printf "\n\n"
 fi
 
