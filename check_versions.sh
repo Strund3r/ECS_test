@@ -94,7 +94,10 @@ fi
 printf "\n\n"
 
 sleep 1
-
-cat ~/Documents/ecs_teste/message/done.txt
+if [ -d "~/myapp" ]; then
+  cat ~/myapp/message/done.txt
+else
+  cat ~/Documents/ecs_teste/message/done.txt
+fi
 
 printf "\n"
