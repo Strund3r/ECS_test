@@ -14,15 +14,14 @@ services:
   #   mem_limit: 260833280
   web:
     image: strund3r/ecs
-    command: /bin/sh -c "chmod +x run.sh && ./run.sh"
-    volumes:
-      - ./:/myapp
+    command: /bin/sh -c "chmod +x run.sh && sleep 1 && ./run.sh"
+    #volumes:
+    #  - .:/myapp
     ports:
       - "3000:3000"
     # depends_on:
     #   - redis
     #   - mongo
-    mem_limit: 260833280
   # worker:
   #   image: strund3r/ecs
   #   command: bundle exec sidekiq
