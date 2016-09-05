@@ -29,6 +29,6 @@ docker push 936160728216.dkr.ecr.us-east-1.amazonaws.com/strund3r/ecs:latest
 
 ################################################################################
 
-cat message/done.txt
+cat /ecs_teste/APPLICATION/message/done.txt
 
 printf "\n"

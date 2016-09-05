@@ -94,10 +94,10 @@ fi
 printf "\n\n"
 
 sleep 1
-if [ -d "~/myapp" ]; then
-  cat ~/myapp/message/done.txt
+if [ -d "/var/www/" ]; then
+  cat /var/www/message/done.txt
 else
-  cat ~/Documents/ecs_teste/message/done.txt
+cat /ecs_teste/APPLICATION/message/done.txt
 fi
 
 printf "\n"

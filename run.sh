@@ -1,17 +1,19 @@
 #!/bin/sh
 
-if [ -d "~/myapp" ]; then
+if [ -d "/var/www/" ]; then
+  sleep 15
+  cd /var/www
   ./RVM_install_server.sh
-  rm -f /myapp/tmp/pids/server.pid
+  rm -f /var/www/tmp/pids/server.pid
   printf "\n\n"
-  cat ~/myapp/message/server.txt
+  cat /var/www/message/server.txt
   printf "\n\n"
 else
   ./RVM_install_machine.sh
-  rm -f ~/Documents/ecs_teste/tmp/pids/server.pid
-  rm -f /myapp/tmp/pids/server.pid
+  rm -f /ecs_teste/APPLICATION/tmp/pids/server.pid
+  rm -f /var/www/tmp/pids/server.pid
   printf "\n\n"
-  cat ~/message/localhost.txt
+  cat /ecs_teste/APPLICATION/message/localhost.txt
   printf "\n\n"
 fi
 
