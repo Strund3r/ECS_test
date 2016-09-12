@@ -1,32 +1,31 @@
-# mongo:
-#   image: mongo
-#   ports:
-#     - "27017:27017"
-#   mem_limit: 260833280
-# redis:
-#   image: redis
-#   volumes:
-#     - ./redis.conf:/usr/local/etc/redis/redis.conf
-#   ports:
-#     - "6379:6379"
-#   mem_limit: 260833280
+mongo:
+  image: mongo
+  cpu_shares: 10
+  ports:
+    - "27017:27017"
+  mem_limit: 260833280
+redis:
+  image: redis
+  cpu_shares: 10
+  volumes:
+    - /app/redis.conf:/usr/local/etc/redis/redis.conf
+  ports:
+    - "6379:6379"
+  mem_limit: 260833280
 web:
   image: strund3r/ecs
-  #command: /bin/sh -c "chmod +x run.sh && sleep 1 && ./run.sh"
-  #volumes:
-  #  - /ecs_teste:/var/www
-  cpu_shares: 50
+  cpu_shares: 25
   mem_limit: 260833280
   ports:
-    - "3000:3000"
-  #working_dir: /var/www
-  # links:
-  #   - redis
-  #   - mongo
-# worker:
-#   image: strund3r/ecs
-#   command: bundle exec sidekiq
-#   links:
-#     - redis
-#     - mongo
-#   mem_limit: 260833280
+    - "80:3000"
+  links:
+    - redis
+    - mongo
+worker:
+  image: strund3r/ecs
+  command: bundle exec sidekiq
+  cpu_shares: 25
+  links:
+    - redis
+    - mongo
+  mem_limit: 260833280
