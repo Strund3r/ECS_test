@@ -31,6 +31,7 @@ $ sudo chmod +x /usr/local/bin/ecs-cli
 ```
 $ ecs-cli configure --region us-east-1 --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_ACCESS_KEY --cluster default
 ```
+
 4. Após a configuração, criar um Task Definition:
 ```
 $ ecs-cli compose create
