@@ -2,7 +2,7 @@
 
 [![Image Layers](https://images.microbadger.com/badges/image/strund3r/ecs.svg)](http://microbadger.com/images/strund3r/ecs)
 [![Image Version](https://images.microbadger.com/badges/version/strund3r/ecs.svg)](http://microbadger.com/images/strund3r/ecs)
-[![Issue Count](https://codeclimate.com/github/Strund3r/ECS_test/badges/issue_count.svg)](https://codeclimate.com/github/Strund3r/ECS_test)
+[![Issue Count](https://codeclimate.com/github/Strund3r/ECS_test/badges/issue_count.svg)](https://codeclimate.com/github/Strund3r/ECS_test/issues)
 [![Code Climate](https://codeclimate.com/github/Strund3r/ECS_test/badges/gpa.svg)](https://codeclimate.com/github/Strund3r/ECS_test)
 [![Build Status](https://travis-ci.org/Strund3r/ECS_test.svg?branch=master)](https://travis-ci.org/Strund3r/ECS_test)
 [![Test Coverage](https://codeclimate.com/github/Strund3r/ECS_test/badges/coverage.svg)](https://codeclimate.com/github/Strund3r/ECS_test/coverage)
@@ -13,7 +13,7 @@
 ## *Passo a Passo - Código*
 
 1. Passar os arquivos principais da aplicação para uma outra pasta dentro do arquivo principal.
-![Antes da mudança](/images-MD/Antes-APP.png)    ![Seta](/images-MD/right_arrow.png)    ![Depois da mudança](/images-MD/Depois-APP.png)
+![Antes da mudança](/images-MD/Antes-APP.png) ->    ![Seta](/images-MD/right_arrow.png)    ![Depois da mudança](/images-MD/Depois-APP.png)
 
 2. Criar um __*[script](https://github.com/Strund3r/ECS_test/blob/master/run.sh)*__ para rodar a aplicação dentro do container.
 
