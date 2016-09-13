@@ -6,6 +6,8 @@ engines:
     enabled: true
   duplication:
     enabled: true
+    exclude_fingerprints:
+    - 551089213ac42a7810d27dd996bd67ff
     config:
       languages:
       - ruby
@@ -14,9 +16,8 @@ engines:
       - php
   eslint:
     enabled: true
-    checks:
-      no-unused-expressions:
-        enabled: false
+    exclude_fingerprints:
+    - 22c620b6a9e5384c55cb4b623e6e32e7
   fixme:
     enabled: true
   rubocop:
