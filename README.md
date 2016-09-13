@@ -13,7 +13,7 @@
 ## *Passo a Passo - Código*
 
 1. Passar os arquivos principais da aplicação para uma outra pasta dentro do arquivo principal.
-![Antes da mudança](/images-MD/Antes-APP.png) ->    ![Seta](/images-MD/right_arrow.png)    ![Depois da mudança](/images-MD/Depois-APP.png)
+![Antes da mudança](/images-MD/Antes-APP.png)    ![Seta](/images-MD/right_arrow.png)    ![Depois da mudança](/images-MD/Depois-APP.png)
 
 2. Criar um __*[script](https://github.com/Strund3r/ECS_test/blob/master/run.sh)*__ para rodar a aplicação dentro do container.
 
