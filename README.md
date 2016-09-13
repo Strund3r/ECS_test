@@ -1,6 +1,13 @@
 # **AWS EC2 Container Service**
 
-[![Image Layers](https://images.microbadger.com/badges/image/strund3r/ecs.svg)](http://microbadger.com/images/strund3r/ecs) [![Image Version](https://images.microbadger.com/badges/version/strund3r/ecs.svg)](http://microbadger.com/images/strund3r/ecs) [![Issue Count](https://codeclimate.com/github/Strund3r/ECS_test/badges/issue_count.svg)](https://codeclimate.com/github/Strund3r/ECS_test) [![Code Climate](https://codeclimate.com/github/Strund3r/ECS_test/badges/gpa.svg)](https://codeclimate.com/github/Strund3r/ECS_test) [![Build Status](https://travis-ci.org/Strund3r/ECS_test.svg?branch=master)](https://travis-ci.org/Strund3r/ECS_test) [![Test Coverage](https://codeclimate.com/github/Strund3r/ECS_test/badges/coverage.svg)](https://codeclimate.com/github/Strund3r/ECS_test/coverage) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5/mini.png)](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5/small.png)](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5)
+[![Image Layers](https://images.microbadger.com/badges/image/strund3r/ecs.svg)](http://microbadger.com/images/strund3r/ecs)
+[![Image Version](https://images.microbadger.com/badges/version/strund3r/ecs.svg)](http://microbadger.com/images/strund3r/ecs)
+[![Issue Count](https://codeclimate.com/github/Strund3r/ECS_test/badges/issue_count.svg)](https://codeclimate.com/github/Strund3r/ECS_test)
+[![Code Climate](https://codeclimate.com/github/Strund3r/ECS_test/badges/gpa.svg)](https://codeclimate.com/github/Strund3r/ECS_test)
+[![Build Status](https://travis-ci.org/Strund3r/ECS_test.svg?branch=master)](https://travis-ci.org/Strund3r/ECS_test)
+[![Test Coverage](https://codeclimate.com/github/Strund3r/ECS_test/badges/coverage.svg)](https://codeclimate.com/github/Strund3r/ECS_test/coverage)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5/mini.png)](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5/small.png)](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5)
 
 [//]: # ([![CircleCI](https://circleci.com/gh/Strund3r/ECS_test.svg?style=svg)](https://circleci.com/gh/Strund3r/ECS_test) [![](https://ci.solanolabs.com:443/Strund3r/ECS_test/badges/branches/master?badge_token=d70f4f631421f879209c4f6b865ae17e63b31284)](https://ci.solanolabs.com:443/Strund3r/ECS_test/suites/517280))
 
