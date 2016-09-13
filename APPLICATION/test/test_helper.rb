@@ -1,4 +1,7 @@
 require "codeclimate-test-reporter"
+CodeClimate::TestReporter.configure do |config|
+config.path_prefix = "APPLICATION"
+end
 CodeClimate::TestReporter.start
 
 ENV['RAILS_ENV'] ||= 'test'
