@@ -1,5 +1,7 @@
 # **AWS EC2 Container Service**
 
+[![](https://images.microbadger.com/badges/image/strund3r/ecs.svg)](http://microbadger.com/images/strund3r/ecs "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/strund3r/ecs.svg)](http://microbadger.com/images/strund3r/ecs "Get your own version badge on microbadger.com") [![Code Climate](https://codeclimate.com/github/Strund3r/ECS_test/badges/gpa.svg)](https://codeclimate.com/github/Strund3r/ECS_test) [![Build Status](https://travis-ci.org/Strund3r/ECS_test.svg?branch=master)](https://travis-ci.org/Strund3r/ECS_test) [![Test Coverage](https://codeclimate.com/github/Strund3r/ECS_test/badges/coverage.svg)](https://codeclimate.com/github/Strund3r/ECS_test/coverage) [![Issue Count](https://codeclimate.com/github/Strund3r/ECS_test/badges/issue_count.svg)](https://codeclimate.com/github/Strund3r/ECS_test) [![CircleCI](https://circleci.com/gh/Strund3r/ECS_test.svg?style=svg)](https://circleci.com/gh/Strund3r/ECS_test) [![](https://ci.solanolabs.com:443/Strund3r/ECS_test/badges/branches/master?badge_token=d70f4f631421f879209c4f6b865ae17e63b31284)](https://ci.solanolabs.com:443/Strund3r/ECS_test/suites/517280)
+
 ## *Passo a Passo - Código*
 
 1. Passar os arquivos principais da aplicação para uma outra pasta dentro do arquivo principal.
