@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<h1 id="-aws-ec2-container-service-"><strong>AWS EC2 Container Service</strong></h1>
+<p><a href="http://microbadger.com/images/strund3r/ecs"><img src="https://images.microbadger.com/badges/image/strund3r/ecs.svg" alt="Image Layers"></a>
+<a href="http://microbadger.com/images/strund3r/ecs"><img src="https://images.microbadger.com/badges/version/strund3r/ecs.svg" alt="Image Version"></a>
+<a href="https://codeclimate.com/github/Strund3r/ECS_test/issues"><img src="https://codeclimate.com/github/Strund3r/ECS_test/badges/issue_count.svg" alt="Issue Count"></a>
+<a href="https://codeclimate.com/github/Strund3r/ECS_test"><img src="https://codeclimate.com/github/Strund3r/ECS_test/badges/gpa.svg" alt="Code Climate"></a>
+<a href="https://travis-ci.org/Strund3r/ECS_test"><img src="https://travis-ci.org/Strund3r/ECS_test.svg?branch=master" alt="Build Status"></a>
+<a href="https://codeclimate.com/github/Strund3r/ECS_test/coverage"><img src="https://codeclimate.com/github/Strund3r/ECS_test/badges/coverage.svg" alt="Test Coverage"></a>
+<a href="https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5"><img src="https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5/small.png" alt="SensioLabsInsight"></a></p>
+<h2 id="-passo-a-passo-c-digo-"><em>Passo a Passo - Código</em></h2>
+<ol>
+<li><p>Passar os arquivos principais da aplicação para uma outra pasta dentro do arquivo principal.
+<img src="/ecs_teste/images-MD/Antes-APP.png" alt="Antes da mudan&#xE7;a">    <img src="/ecs_teste/images-MD/right_arrow.png" alt="Seta">    <img src="/ecs_teste/images-MD/Depois-APP.png" alt="Depois da mudan&#xE7;a"></p>
+</li>
+<li><p>Criar um <strong><em><a href="https://github.com/Strund3r/ECS_test/blob/master/run.sh">script</a></em></strong> para rodar a aplicação dentro do container.</p>
+</li>
+<li><p>Atualizar o <strong><em><a href="https://github.com/Strund3r/ECS_test/blob/master/Dockerfile">Dockerfile</a></em></strong> com os comandos para rodar o <strong><em><a href="https://github.com/Strund3r/ECS_test/blob/master/run.sh">script</a></em></strong>.</p>
+</li>
+<li><p>Atualizar o <strong><em><a href="https://github.com/Strund3r/ECS_test/blob/master/docker-compose.yml#L17">docker-compose.yml</a></em></strong> removendo o comando de execução do container Web.</p>
+</li>
+</ol>
+<h2 id="-passo-a-passo-ecs-"><em>Passo a Passo - ECS</em></h2>
+<ol>
+<li><p>Criar uma instância <strong><em><a href="https://console.aws.amazon.com/ecs/home?region=us-east-1#/firstRun">ECS</a></em></strong> e configurar o repositório no EC2 Container Registry.</p>
+</li>
+<li><p>Pegar os comandos fornecidos e criar um <strong><em><a href="https://github.com/Strund3r/ECS_test/blob/master/ecs_push.sh">script (ECS)</a></em></strong> ( <strong><em><a href="https://github.com/Strund3r/ECS_test/blob/master/docker_push.sh">script (DockerHub)</a></em></strong> )
+<img src="/ecs_teste/images-MD/ecs-reg.png" alt="ECS Registry Commands"></p>
+</li>
+<li><p>Após finalizar o push, instalar e configurar o ECS-CLI no terminal:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;sudo&nbsp;curl&nbsp;-o&nbsp;/usr/local/bin/ecs-cli&nbsp;</span><span class="markup underline link https hyperlink"><span>https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest</span></span></span></span></div></pre><pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;ecs-cli&nbsp;--version</span></span></span></div></pre><pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;sudo&nbsp;chmod&nbsp;+x&nbsp;/usr/local/bin/ecs-cli</span></span></span></div></pre><pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;ecs-cli&nbsp;configure&nbsp;--region&nbsp;us-east-1&nbsp;--access-key&nbsp;$AWS_ACCESS_KEY_ID&nbsp;--secret-key&nbsp;$AWS_SECRET_ACCESS_KEY&nbsp;--cluster&nbsp;default</span></span></span></div></pre></li>
+<li><p>Após a configuração, criar um Task Definition:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;ecs-cli&nbsp;compose&nbsp;create</span></span></span></div></pre></li>
+<li><p>Acessar o <a href="https://console.aws.amazon.com/ecs/home?region=us-east-1#/clusters/default/services">painel do ECS</a> e criar um novo serviço:
+<img src="/ecs_teste/images-MD/servi&#xE7;o.png" alt="Servi&#xE7;o">
+e configurar Load Balancing e Auto Scaling
+<img src="/ecs_teste/images-MD/config-elb-as.png" alt="Config ELB e Auto Scaling"></p>
+</li>
+</ol>

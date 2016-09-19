@@ -53,7 +53,7 @@ sleep 0.5
 echo NodeJS version:
 printf "\n"
 if [[ $nodejs_version = "v4.2.6" ]]; then
-  echo -e "\t\e[1;4;28;41m NodeJS v4.2.6  \e[0m"
+  echo -e "\t\e[1;4;28;41m NodeJS v4.2.6 \e[0m"
 else
   echo -e "\t\e[1;4;28;41m NodeJS $nodejs_version \e[0m \t\e[1;4;31;40m* UPDATED *\e[0m"
 fi

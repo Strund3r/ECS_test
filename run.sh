@@ -16,7 +16,6 @@ else
   printf "\n\n"
   cat /app/message/server.txt
   printf "\n\n"
-  rake db:create
   rake db:migrate
   bundle exec rails server -b '0.0.0.0'
 fi

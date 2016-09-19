@@ -23,14 +23,14 @@
 
 ## *Passo a Passo - ECS*
 
-1. Criar uma instância __*[ECS](https://console.aws.amazon.com/ecs/home?region=us-east-1#/firstRun)*__ e configurar o repositório no EC2 Container Registry.
+1. Criar uma instância __*[ECS](https://console.aws.amazon.com/ecs)*__ e configurar o repositório no EC2 Container Registry.
 
 2. Pegar os comandos fornecidos e criar um __*[script (ECS)](https://github.com/Strund3r/ECS_test/blob/master/ecs_push.sh)*__ ( __*[script (DockerHub)](https://github.com/Strund3r/ECS_test/blob/master/docker_push.sh)*__ )
 ![ECS Registry Commands](/images-MD/ecs-reg.png)
 
 3. Após finalizar o push, instalar e configurar o ECS-CLI no terminal:
 ```
-$ sudo curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest
+$ sudo curl -o /usr/local/bin/ecs-cli (https://s3.amazonaws.com/amazon-ecs-cli/ecs- tutorialcli-linux-amd64-latest
 ```
 ```
 $ ecs-cli --version
@@ -47,7 +47,9 @@ $ ecs-cli configure --region us-east-1 --access-key $AWS_ACCESS_KEY_ID --secret-
 $ ecs-cli compose create
 ```
 
-5. Acessar o [painel do ECS](https://console.aws.amazon.com/ecs/home?region=us-east-1#/clusters/default/services) e criar um novo serviço:
+5. Criar Application Load Balancer seguindo esse __*[tutorial](http://docs.aws.amazon.com/pt_br/AmazonECS/latest/developerguide/create-application-load-balancer.html)*__.
+
+5. Acessar o __*[painel do ECS](https://console.aws.amazon.com/ecs/home?region=us-east-1#/clusters/default/services)*__ e criar um novo serviço:
 ![Serviço](/images-MD/serviço.png)
 e configurar Load Balancing e Auto Scaling
 ![Config ELB e Auto Scaling](/images-MD/config-elb-as.png)
