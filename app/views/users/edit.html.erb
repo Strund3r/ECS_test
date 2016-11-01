@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<h1>Editar Usuário</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Mostrar', @user %> |
+<%= link_to 'Voltar', users_path %>
 <head>
 <style>
 /* unvisited link */
@@ -27,7 +32,6 @@ h1{
 
 body {
   background-image: url(background.gif);
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -53,4 +57,4 @@ h1 {
 <%= render 'form' %>
 
 <%= link_to 'Mostrar', @user %> |
-<%= link_to 'Volver', users_path %>
+<%= link_to 'Voltar', users_path %>

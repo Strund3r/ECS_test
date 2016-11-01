@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <head>
 <style>
 /* unvisited link */
@@ -6,69 +5,37 @@ a:link {
   text-decoration: none;
   color: green;
 }
+
 /* visited link */
 a:visited {
   text-decoration: none;
   color: red;
 }
+
 /* mouse over link */
 a:hover {
   text-decoration: underline;
   color: #438EAE;
-  font-size: 150%;
+  font-size: 200%;
   background: pink;
 }
+
 /* selected link */
 a:active {
   text-decoration: underline;
   color: blue;
 }
+
 h1, p {
   text-transform: uppercase;
 }
+
 body {
   background-image: url(background.gif);
-  background-repeat: no-repeat;
   background-size: cover;
 }
-table {
-  box-shadow: 10px 10px 7px green, 23px 23px 20px blue, 33px 33px 20px red;
-  -webkit-animation-name: example1; /* Chrome, Safari, Opera */
-  -webkit-animation-duration: 5s; /* Chrome, Safari, Opera */
-  -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
-}
-h1 {
-  text-shadow: 1px 2px 10px #9900CC, 18px -18px 3px blue, 36px -36px 5px green;
-  animation-name: example2;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-/* Chrome, Safari, Opera */
-@-webkit-keyframes example1 {
-  0%   {background-color:green; left:0px; top:0px;}
-  25%  {background-color:red; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:red; left:0px; top:200px;}
-  100% {background-color:green; left:0px; top:0px;}
-}
-/* Standard syntax */
-@keyframes example2 {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:green; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
-}
-h1, th {
-  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
-  font-variant: small-caps;
-}
-h1 {
-  box-shadow: 10px 10px 7px green, 23px 23px 20px blue, 33px 33px 20px red;
-}
+
 h1, table, th, td {
-  border-radius: 63px 0px;
-  /*border-radius: 30%;*/
   border: 7px solid gold;
   border-collapse: separate;
   background-color: pink;
@@ -77,19 +44,20 @@ h1, table, th, td {
   border-left-style: groove;
   border-right-style: groove;
 }
+
 h1, th, td {
   padding: 10px;
-  text-align: center
+  text-align: center;
 }
+
 th {
   text-decoration: underline;
-  font-size: 150%;
   background-color: #FF607B;
+  font-size: 150%;
 }
-iframe {
-    float: left;
-    margin: 60px -500px 80px 10px;
-}
+/*th.thick {
+  font-weight: bold;
+}*/
 </style>
 </head>
 
@@ -100,19 +68,14 @@ iframe {
 <table align="center">
   <thead>
     <tr>
-      <th><big>Nome</big>  <img src="user.png"></th>
-      <th><big>E-mail</big>  <img src="email.png"></th>
-      <th colspan="3"><big>Opções</big>  <img src="settings.png"></th>
+      <th class="thick"><big>E-mail</big>  <img src="email.png"></th>
+      <th class="thick" colspan="3"><big>Opções</big>  <img src="settings.png"></th>
     </tr>
   </thead>
 
   <tbody>
-    <!-- <iframe width="348" height="315"
-            src="https://www.youtube.com/embed/aK9hD-ry5WE?autoplay=1" frameborder="0">
-    </iframe> -->
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= link_to 'Mostrar', user %>  <img src="find.png"></td>
         <td><%= link_to 'Editar', edit_user_path(user) %>  <img src="page_white_text.png"></td>
