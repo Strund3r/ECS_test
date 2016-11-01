@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'Usuário criado com sucesso!' }
+        format.html { redirect_to @user, notice: 'Usuário criado com sucesso !!!' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'Usuário atualizado com sucesso!' }
+        format.html { redirect_to @user, notice: 'Usuário atualizado com sucesso !!!' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'Usuário removido com sucesso!' }
+      format.html { redirect_to users_url, notice: 'Usuário removido com sucesso !!!' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email)
+      params.require(:user).permit(:name, :email)
     end
 end
