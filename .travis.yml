@@ -1,9 +1,8 @@
 language: ruby
 rvm:
-- 2.3.1
+- 2.0.0-p648
 env:
 - DB=sqlite3
-before_install: cd APPLICATION
 addons:
     code_climate:
         repo_token: e1a9cd194269695aed7b9c43bed7633af4b3f911dbd78b937a584e88d4be1435
