@@ -1,8 +1,20 @@
+# CodeClimate
 require "codeclimate-test-reporter"
 CodeClimate::TestReporter.configure do |config|
 config.path_prefix = "APPLICATION"
 end
 CodeClimate::TestReporter.start
+
+################################################################################
+
+#Codecov
+require 'simplecov'
+SimpleCov.start
+
+require 'codecov'
+SimpleCov.formatter = SimpleCov::Formatter::Codecov
+
+################################################################################
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
