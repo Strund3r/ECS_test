@@ -23,17 +23,14 @@ RUN apt-get update -qq && apt-get install -y \
   ruby2.0-dev \
   zlib1g-dev
 
-ENV app /app/
-
-RUN mkdir $app
-COPY . $app
-WORKDIR $app
+RUN mkdir /app
+COPY . /app
+WORKDIR /app
 
 RUN /usr/bin/gem install bundler
 RUN /usr/bin/gem install rubygems-update
 RUN update_rubygems
 RUN /usr/local/bin/bundle install
-CMD ["./check_versions.sh"]
 
 ENV RAILS_ENV=development
 RUN bundle exec rake assets:precompile --trace
