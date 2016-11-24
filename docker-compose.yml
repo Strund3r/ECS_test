@@ -14,7 +14,6 @@ redis:
   mem_limit: 260833280
 web:
   image: strund3r/ecs
-#  command: bundle exec rails server -p 3000 -b '0.0.0.0'
   cpu_shares: 25
   mem_limit: 260833280
   ports:
@@ -30,3 +29,19 @@ worker:
     - redis
     - mongo
   mem_limit: 260833280
+portainer:
+  image: portainer/portainer:latest
+  ports:
+    - "9000:9000"
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+ngrok:
+  image: strund3r/ngrok-localhost
+  ports:
+    - "4040:4040"
+  environment:
+    NGROK_REGION: us
+    NGROK_HOST: web
+    NGROK_PORT: 3000
+  links:
+    - web
