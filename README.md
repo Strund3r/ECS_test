@@ -9,7 +9,7 @@
 [![codecov](https://codecov.io/gh/Strund3r/ECS_test/branch/master/graph/badge.svg)](https://codecov.io/gh/Strund3r/ECS_test)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5/small.png)](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5)
 
-[//]: # ([![CircleCI](https://circleci.com/gh/Strund3r/ECS_test.svg?style=svg)](https://circleci.com/gh/Strund3r/ECS_test) [![](https://ci.solanolabs.com:443/Strund3r/ECS_test/badges/branches/master?badge_token=d70f4f631421f879209c4f6b865ae17e63b31284)](https://ci.solanolabs.com:443/Strund3r/ECS_test/suites/517280) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5/mini.png)](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5))
+[![CircleCI](https://circleci.com/gh/Strund3r/ECS_test.svg?style=svg)](https://circleci.com/gh/Strund3r/ECS_test) [![](https://ci.solanolabs.com:443/Strund3r/ECS_test/badges/branches/master?badge_token=d70f4f631421f879209c4f6b865ae17e63b31284)](https://ci.solanolabs.com:443/Strund3r/ECS_test/suites/517280) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5/mini.png)](https://insight.sensiolabs.com/projects/50e0016b-4b30-4b0b-9caa-9fdda8c8b4a5)
 
 ## *Passo a Passo - Código*
 
