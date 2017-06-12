@@ -27,7 +27,7 @@
 1. Criar uma instância __*[ECS](https://console.aws.amazon.com/ecs)*__ e configurar o repositório no EC2 Container Registry.
 
 2. Pegar os comandos fornecidos e criar um __*[script (ECS)](https://github.com/Strund3r/ECS_test/blob/master/ecs_push.sh)*__ ( __*[script (DockerHub)](https://github.com/Strund3r/ECS_test/blob/master/docker_push.sh)*__ )
-![ECS Registry Commands](/images-MD/ecs-reg.png)
+![ECS Registry Commands](/images-MD/ecs-reg-cmd.png)
 
 3. Após finalizar o push, instalar e configurar o ECS-CLI no terminal:
 ```
